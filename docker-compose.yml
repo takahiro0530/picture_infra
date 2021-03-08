@@ -1,0 +1,15 @@
+version: '3'
+services:
+  picture_management_server:
+    image: picture_management_server:latest
+    build:
+      context: repo/picture_management_server
+    ports:
+      - "50052:50051"
+
+  picture_management_web:
+    image: picture_management_web:latest
+    build: repo/picture_management_web
+    ports:
+      - "50053:3000"
+    
